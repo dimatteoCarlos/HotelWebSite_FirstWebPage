@@ -1,0 +1,410 @@
+/*Archivo css para Hotel Web Site*/
+/*Realizado por CADR*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --selva-bg: #3a9700c7;
+  --dark-bg: green;
+  --selva-color: #b3ff10;
+  --light-beach: #02afd7;
+  --sand-beach: #fbd695;
+  --sand-dark: #c2b5be;
+  --dark: #333;
+}
+/*Delimitate html elements*/
+/* div,
+section,
+article {
+  border: 1px solid yellow;
+} */
+
+/*Main Styling
+for core elements, anythingn that doesn't have a class or id*/
+html,
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7em; /*em se refiere al parent*/
+}
+
+a {
+  color: #333;
+  color: var(--sand-beach, red);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  padding-bottom: 20px;
+}
+p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+/*Utility Class*/
+.bg-dark {
+  background-color: #333;
+  color: #ddd;
+}
+.bg-light {
+  background-color: #fff;
+  color: #333;
+}
+.bg-primary {
+  background-color: var(--sand-beach);
+  color: #333;
+}
+/*padding*/
+.py-1 {
+  padding: 10px 0px;
+}
+.py-2 {
+  padding: 20px 0px;
+}
+
+.py-3 {
+  padding: 30px 0px;
+}
+
+/*heading*/
+.l-heading {
+  font-size: 2rem;
+}
+
+.sec-text {
+  text-align: center;
+  padding-top: 20px;
+  color: var(--dark-bg);
+}
+/*****************/
+.container {
+  padding: 0 20px;
+  overflow: auto;
+  margin: auto;
+}
+.primary-text {
+  color: var(--selva-bg, #b3ff10);
+}
+.lead {
+  font-size: 20px;
+}
+.sec-text {
+  color: var(--selva-bg);
+  text-align: justify;
+  padding-bottom: 20px;
+}
+
+.btn {
+  margin-top: 10px;
+  display: inline-block;
+  font-size: 1.5rem;
+  color: var(--sand-beach);
+  background-color: #333333;
+  padding: 13px 20px;
+  border: none;
+  border-radius: 50px 2px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--selva-color);
+  color: var(--dark);
+  border-radius: 2px 50px;
+}
+.btn-light {
+  color: #333333;
+  background-color: var(--sand-beach);
+}
+
+#navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  background-color: rgba(51, 51, 51, 0.9);
+  overflow: auto;
+  opacity: 0.8;
+  color: var(--sand-beach);
+}
+#navbar .logoImg {
+  border-radius: 10px;
+  width: 250px;
+  height: 60px;
+  opacity: 0.9;
+  /* float: left; */
+  padding: 7px;
+}
+
+#navbar h1 {
+  display: inline-block;
+  /* float: left; */
+  padding: 20px;
+}
+
+#navbar ul {
+  list-style-type: none;
+  list-style: none;
+  float: right;
+}
+
+#navbar ul li {
+  float: left;
+}
+
+#navbar ul li a {
+  display: block;
+  padding: 20px;
+  font-weight: bold;
+  /* text-align:center; */
+}
+
+#navbar ul li a:hover,
+#navbar ul li a.current {
+  background-color: var(--selva-bg, #333);
+  color: #f7c08a;
+}
+
+/*SHOWCASE*/
+
+#showcase {
+  background: url('../imgs/habitacion.jpeg') no-repeat center center/cover;
+  opacity: 0.8;
+  overflow: hidden;
+  height: 100vh;
+  width: auto;
+}
+#showcase .container {
+  height: 100%;
+}
+
+#showcase .showcase-content {
+  /* display:block; */
+  text-align: center;
+  /* font-size: 20px; */
+  color: var(--sand-beach, #fff);
+  padding-top: 170px;
+  height: 100%;
+}
+
+#showcase .showcase-content h1 {
+  font-size: 60px;
+  line-height: 1.2em;
+}
+
+#showcase .showcase-content p {
+  padding-bottom: 150px;
+  line-height: 1.7em;
+}
+
+/********* Home Info*/
+
+#home-info {
+  height: 550px;
+}
+#home-info .home-img {
+  float: left;
+  width: 50%;
+  background: url('../imgs/hotel-outlook.jpg') no-repeat center/cover;
+  min-height: 100%;
+  /* overflow:auto; */
+}
+
+#home-info .home-history {
+  float: right;
+  width: 50%;
+  text-align: center;
+  color: var(--sand-beach);
+  min-height: 100%;
+
+  padding: 50px 30px;
+  overflow: hidden;
+}
+#home-info .home-history p.hist-2 {
+  padding-bottom: 30px;
+}
+#home-info .home-history h2 {
+  text-transform: capitalize;
+  padding-bottom: 10px;
+}
+#home-info .home-history .hist-2 {
+  font-size: 0.9em;
+  color: #fff;
+  padding: 20px;
+}
+
+/**FEATURES*/
+
+.box {
+  max-width: 33.333%;
+  float: left;
+  text-align: center;
+  padding: 10px;
+  max-height: 650px;
+}
+
+.box h3 {
+  padding-top: 10px;
+}
+.box p.lead {
+  font-size: 1.1rem;
+}
+.box p {
+  font-size: 0.8rem;
+}
+i {
+  padding: 20px 10px 10px;
+}
+#features {
+  height: 400px;
+  width: 100%;
+  /* width:1150px; */
+}
+
+.clr {
+  clear: both;
+}
+/*Footer*/
+.main-footer {
+  text-align: center;
+  background: #444;
+  color: #fff;
+  padding: 10px;
+  font-size: 0.5em;
+}
+/********ABOUT PAGE***********/
+#about-info {
+  height: 50vv;
+  background-color: #ddd;
+}
+#about-info .container {
+  background-color: #fff;
+  color: var(--dark-beach);
+  height: 70%;
+  width: 90%;
+  padding: 20px;
+  background-color: #ddd;
+}
+#about-info .container .left-info {
+  float: left;
+  width: 50%;
+  min-height: 100%;
+
+  /* padding: 10px; */
+}
+#about-info .container .left-info img {
+  border-radius: 50%;
+  width: 70%;
+  display: block;
+  margin: auto;
+}
+#about-info .container .right-info {
+  text-align: center;
+  float: right;
+  width: 50%;
+  margin-top: 10px;
+  min-height: 100%;
+}
+/* h1{color:#333;} */
+
+/*****TESTIMONIALS*******/
+
+.container {
+  font-size: larger;
+}
+#testimonials .container {
+  min-width: 100vh;
+  height: 600px;
+  background: url('../imgs/hotelInterior.jpg') no-repeat center/cover;
+  /* opacity: 0.8; */
+  color: var(--dark);
+  font-weight: bolder;
+  text-align: center;
+}
+#testimonials .container .testimonial {
+  opacity: 0.85;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 30px;
+}
+
+#testimonials .container .testimonial img {
+  float: left;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin-left: 50px;
+}
+#testimonials .container .testimonial p {
+  height: 100px;
+  padding: 10px;
+}
+
+.container h1 {
+  color: white;
+  font-size: 2rem;
+}
+
+.container .main-title {
+  color: var(--selva-color);
+  color: green;
+  font-size: 2rem;
+}
+/******CONTACT US****/
+.contact-info h1 {
+  color: #333;
+  padding: 20px;
+  font-size: 3rem;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+.contact-info p {
+  padding: 0 20px;
+}
+.contact-info .form-group {
+  padding: 20px;
+  margin-bottom: 10px;
+  /* margin-bottom: 20px; */
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  border: 1px #ddd solid;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+}
+.form-group textarea {
+  height: 150px;
+}
+
+.form-group textarea:focus,
+.form-group input:focus {
+  outline: none;
+  border-color: var(--sand-beach);
+}
+.form-group textarea {
+  resize: none;
+}
+/**FEATURES***/
+
+.container-info {
+  max-width: 100%;
+  height: 150px;
+  color: #fff;
+}
+.container-info {
+  min-width: 1100px;
+}
+.container-info .box {
+  min-width: 33.333%;
+}
